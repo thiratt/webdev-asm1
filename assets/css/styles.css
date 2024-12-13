@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+	background-color: #4335a7;
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+.movie-container {
+	padding: calc(0.5 * 1rem);
+}
+
+.movie-content-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.movie-banner {
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 2.5 / 1;
+}
+
+.movie-banner-wrap {
+	width: 100%;
+	height: 100%;
+	border-radius: calc(0.5 * 1.5rem);
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+	overflow: hidden;
+}
+
+.banner-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center 50%;
+}
+
+.movie-details {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.poster img {
+	border-radius: 8px;
+	width: 240px;
+	height: auto;
+}
+
+.details {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 60%;
+}
+
+.movie-title {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	cursor: pointer;
+	width: fit-content;
+}
+
+.movie-title h1 {
+	font-size: 3rem;
+}
+
+.movie-title:hover svg {
+	fill: #e3ec39;
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.rating p {
+	font-size: 1.1rem;
+}
+
+.rating span {
+	color: #e3ec39;
+	font-size: large;
+}
+
+.rate-btn {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	padding: 8px;
+	transition: all 0.2s;
+}
+
+.rate-btn p {
+	color: #fb9ec6;
+}
+
+.rate-btn:hover {
+	background-color: hsla(0, 0%, 100%, 0.238);
+}
+
+.description {
+	line-height: 1.5;
+}
+
+.platform {
+	font-weight: bold;
+	color: #e3ec39;
+}
+
+.summary {
+	font-size: 1.1rem;
+}
+
+.cast {
+	display: flex;
+	gap: 20px;
+}
+
+.actor {
+	text-align: center;
+}
+
+.actor:hover img {
+	border-color: #e3ec39;
+	cursor: pointer;
+}
+
+.actor:hover p {
+	color: #e3ec39;
+}
+
+.actor img {
+	height: 17vh;
+	width: 17vh;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 8px;
+	border: 3px solid transparent;
+	transition: all 0.2s;
+}
+
+.actor p {
+	font-size: 0.9rem;
+	margin: 0;
+	transition: all 0.2s;
+}

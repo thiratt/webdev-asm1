@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+	--background: #000;
+	--button-primary: #2014ff69;
+	--button-primary-hover: #c4ff23;
+	--button-ghost-hover: #cdff431f;
+	--card-primary: rgb(26, 26, 26);
+	--yellow: #e3ec39;
+}
+
+body {
+	background-color: var(--background);
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+.container {
+	padding: calc(0.5 * 5rem);
+}
+
+.content-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.header {
+	display: flex;
+	gap: 8px;
+}
+
+.header span {
+	width: 5px;
+	border-radius: 4px;
+	background-color: var(--yellow);
+}
+
+.movie-lists-wrap {
+	position: relative;
+	display: flex;
+	background-color: #17113e48;
+}
+
+.movie-navigator {
+	position: absolute;
+	top: 30%;
+	z-index: 2;
+	background-color: #c4ff23;
+	padding: 1.25rem 0.75rem;
+	cursor: pointer;
+	border-radius: 6px;
+	background-color: rgba(18, 18, 18, 0.45);
+	border-color: rgba(255, 255, 255, 0.7);
+	border-style: solid;
+	border-width: 1px;
+	font-size: 1.5rem;
+	line-height: 0;
+	transition: all 0.25s ease-out;
+	pointer-events: all;
+}
+
+.d {
+	border-radius: var(--ipt-cornerRadius);
+	background: hsla(0, 0%, 7%, 0.45);
+	background: rgba(var(--ipt-baseAlt-shade3-rgb), 0.45);
+	border-color: hsla(0, 0%, 100%, 0.7);
+	border-color: rgba(var(--ipt-on-baseAlt-rgb), 0.7);
+	border-style: solid;
+	border-width: 1px;
+	font-size: 1.5rem;
+	line-height: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transition: all 0.25s ease-out;
+	z-index: 5;
+	top: 50%;
+	padding: 0.75rem 0.25rem;
+}
+
+.movie-navigator-right {
+	right: 0;
+}
+
+.movie-lists {
+	display: flex;
+	border-radius: 12px;
+	overflow-x: scroll;
+	padding: 12px;
+	gap: 18px;
+	scrollbar-width: none;
+}
+
+.movie-card {
+	background-color: var(--card-primary);
+	border-radius: 12px;
+	max-width: 210px;
+	display: flex;
+	flex-direction: column;
+}
+
+.movie-card-poster {
+	overflow: hidden;
+	border-radius: 12px;
+}
+
+.movie-card-poster img {
+	border-radius: 8px;
+	width: 210px;
+	height: auto;
+	transition: all 0.15s;
+}
+
+.movie-card-poster img:hover {
+	scale: 1.1;
+}
+
+.movie-card-content {
+	display: flex;
+	flex-direction: column;
+	margin: 14px;
+	gap: 6px;
+	flex-grow: 1;
+}
+
+.movie-card-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 14px;
+	justify-content: flex-end;
+}
+
+.movie-card-footer .button-wrap {
+	display: inline-flex;
+	gap: 8px;
+}
+
+.movie-card-footer button.primary .button-wrap p,
+.movie-card-footer button.primary .button-wrap svg {
+	color: rgb(87, 153, 239);
+	fill: rgb(87, 153, 239);
+}
+
+.movie-card-footer button.ghost .button-wrap svg {
+	fill: white;
+}
+
+.movie-card-footer button.primary {
+	height: 38px;
+	/* background-color: var(--button-primary); */
+	background: rgba(255, 255, 255, 0.08);
+	border: none;
+	border-radius: 30px;
+	font-weight: 600;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+	padding-left: 8px;
+	color: rgb(87, 153, 239);
+}
+
+.movie-card-footer button.ghost {
+	height: 38px;
+	background-color: transparent;
+	border: none;
+	border-radius: 30px;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	padding-left: 8px;
+}
+
+.movie-card-footer button:hover {
+	background-color: rgba(255, 255, 255, 0.118);
+}
+
+.movie-card-footer button:active {
+	transform: scale(0.97);
+}
